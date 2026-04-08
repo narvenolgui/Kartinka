@@ -1,36 +1,51 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" width="500" height="300">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300">
   <defs>
     <style>
       .body-line { fill: none; stroke: #1a2a4a; stroke-linecap: round; stroke-linejoin: round; }
       .torso { stroke-width: 6; }
       .limb { stroke-width: 4.5; }
       .head { stroke-width: 5; fill: none; }
-      .heart { fill: none; stroke: #d44; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+      .rope { stroke-width: 4; stroke: #1a2a4a; }
+      .anger { stroke-width: 2.5; stroke: #1a2a4a; }
     </style>
   </defs>
 
-  <!-- ЛЕВЫЙ ЧЕЛОВЕЧЕК -->
-  <circle cx="180" cy="100" r="24" class="body-line head"/>
-  <path d="M180 124 C178 145, 177 160, 176 185" class="body-line torso"/>
-  <!-- Левая рука (поднята вверх) -->
-  <path d="M178 135 C150 120, 135 90, 140 60" class="body-line limb"/>
-  <!-- Правая рука (обнимает правого человечка) -->
-  <path d="M178 138 C195 130, 210 125, 230 120" class="body-line limb"/>
+  <!-- ЛЕВЫЙ ЧЕЛОВЕЧЕК (злой, тянет канат влево) -->
+  <circle cx="160" cy="100" r="24" class="body-line head"/>
+  <path d="M160 124 C158 145, 157 160, 156 185" class="body-line torso"/>
+  <!-- Левая рука (тянет канат назад) -->
+  <path d="M158 135 C130 140, 110 145, 95 150" class="body-line limb"/>
+  <!-- Правая рука (тоже тянет) -->
+  <path d="M158 135 C175 140, 190 148, 200 152" class="body-line limb"/>
   <!-- Ноги -->
-  <path d="M176 185 C165 210, 158 235, 155 260" class="body-line limb"/>
-  <path d="M176 185 C185 210, 190 235, 195 260" class="body-line limb"/>
+  <path d="M156 185 C145 210, 138 235, 135 260" class="body-line limb"/>
+  <path d="M156 185 C165 210, 170 235, 175 260" class="body-line limb"/>
+  <!-- Чёрточки злости (слева от головы) -->
+  <path d="M120 70 L110 60 M125 80 L108 75 M118 55 L108 45" class="anger"/>
 
-  <!-- ПРАВЫЙ ЧЕЛОВЕЧЕК -->
-  <circle cx="320" cy="100" r="24" class="body-line head"/>
-  <path d="M320 124 C322 145, 323 160, 324 185" class="body-line torso"/>
-  <!-- Правая рука (поднята вверх) -->
-  <path d="M322 135 C350 120, 365 90, 360 60" class="body-line limb"/>
-  <!-- Левая рука (обнимает левого человечка) -->
-  <path d="M322 138 C305 130, 290 125, 270 120" class="body-line limb"/>
+  <!-- ПРАВЫЙ ЧЕЛОВЕЧЕК (злой, тянет канат вправо) -->
+  <circle cx="440" cy="100" r="24" class="body-line head"/>
+  <path d="M440 124 C442 145, 443 160, 444 185" class="body-line torso"/>
+  <!-- Правая рука (тянет канат назад) -->
+  <path d="M442 135 C470 140, 490 145, 505 150" class="body-line limb"/>
+  <!-- Левая рука (тоже тянет) -->
+  <path d="M442 135 C425 140, 410 148, 400 152" class="body-line limb"/>
   <!-- Ноги -->
-  <path d="M324 185 C335 210, 342 235, 345 260" class="body-line limb"/>
-  <path d="M324 185 C315 210, 310 235, 305 260" class="body-line limb"/>
+  <path d="M444 185 C455 210, 462 235, 465 260" class="body-line limb"/>
+  <path d="M444 185 C435 210, 430 235, 425 260" class="body-line limb"/>
+  <!-- Чёрточки злости (справа от головы) -->
+  <path d="M480 70 L490 60 M475 80 L492 75 M482 55 L492 45" class="anger"/>
 
-  <!-- СЕРДЕЧКО (повыше — между головами, уровень примерно 80) -->
-  <path d="M250 85 C245 75, 235 75, 235 85 C235 95, 250 105, 250 110 C250 105, 265 95, 265 85 C265 75, 255 75, 250 85 Z" class="heart"/>
+  <!-- КАНАТ (идёт от рук к центру) -->
+  <path d="M95 150 C130 155, 170 158, 210 156" class="rope"/>
+  <path d="M390 156 C430 158, 470 155, 505 150" class="rope"/>
+  
+  <!-- РАЗРЫВ КАНАТА (зигзаг между двумя частями) -->
+  <polyline points="210,156 225,145 235,160 245,148 255,158 270,155 280,165 290,158 310,156" class="rope"/>
+  
+  <!-- ДИНАМИЧЕСКИЕ ЛИНИИ В МЕСТЕ РАЗРЫВА (трещины/искры) -->
+  <line x1="250" y1="150" x2="240" y2="135" class="anger"/>
+  <line x1="260" y1="155" x2="275" y2="140" class="anger"/>
+  <line x1="270" y1="162" x2="285" y2="175" class="anger"/>
+  <line x1="240" y1="158" x2="225" y2="165" class="anger"/>
 </svg>
