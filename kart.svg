@@ -1,48 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 400" width="700" height="400">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" width="500" height="300">
   <defs>
     <style>
-      .outline { fill: none; stroke: #1a1a1a; stroke-linecap: round; stroke-linejoin: round; }
-      .thick { stroke-width: 5; }
-      .med { stroke-width: 4; }
-      .light { stroke-width: 3.5; }
+      .body-line { fill: none; stroke: #1a1a1a; stroke-linecap: round; stroke-linejoin: round; }
+      .torso { stroke-width: 6; }
+      .limb { stroke-width: 4.5; }
+      .head { stroke-width: 5; fill: none; }
+      .heart { fill: none; stroke: #d44; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
     </style>
   </defs>
 
-  <!-- ========== ЛЕВЫЙ ЧЕЛОВЕЧЕК ========== -->
-  <!-- Голова -->
-  <circle cx="220" cy="110" r="28" class="outline thick"/>
+  <!-- ЛЕВЫЙ ЧЕЛОВЕЧЕК -->
+  <circle cx="180" cy="100" r="24" class="body-line head"/>
+  <path d="M180 124 C178 145, 177 160, 176 185" class="body-line torso"/>
+  <!-- Левая рука вверх -->
+  <path d="M178 135 C150 120, 135 90, 140 60" class="body-line limb"/>
+  <!-- Ноги -->
+  <path d="M176 185 C165 210, 158 235, 155 260" class="body-line limb"/>
+  <path d="M176 185 C185 210, 190 235, 195 260" class="body-line limb"/>
 
-  <!-- Тело (куртка/футболка) -->
-  <path d="M195 138 C190 160, 185 180, 185 210 C185 230, 195 245, 220 245 C245 245, 255 230, 255 210 C255 180, 250 160, 245 138 Z" class="outline thick"/>
+  <!-- ПРАВЫЙ ЧЕЛОВЕЧЕК -->
+  <circle cx="320" cy="100" r="24" class="body-line head"/>
+  <path d="M320 124 C322 145, 323 160, 324 185" class="body-line torso"/>
+  <!-- Правая рука вверх -->
+  <path d="M322 135 C350 120, 365 90, 360 60" class="body-line limb"/>
+  <!-- Ноги -->
+  <path d="M324 185 C335 210, 342 235, 345 260" class="body-line limb"/>
+  <path d="M324 185 C315 210, 310 235, 305 260" class="body-line limb"/>
 
-  <!-- Левая рука (поднята вверх) объёмная -->
-  <path d="M195 145 C175 135, 160 110, 155 85 C150 65, 158 55, 170 58 C180 60, 185 75, 190 95 C195 110, 200 130, 205 145" class="outline med"/>
+  <!-- ОБНИМАЮЩИЕ РУКИ (единая дуга) -->
+  <path d="M178 138 C220 160, 280 160, 322 138" class="body-line limb"/>
 
-  <!-- Правая рука (обнимает правого человечка, идёт от плеча вправо и вверх) -->
-  <path d="M245 145 C260 140, 280 130, 310 120 C325 115, 335 125, 330 140 C325 155, 310 155, 295 150 C275 143, 260 150, 250 155" class="outline med"/>
-
-  <!-- Левая нога (объёмная) -->
-  <path d="M200 245 C190 270, 180 300, 175 330 C172 345, 180 355, 195 355 C210 355, 210 340, 210 325 C210 300, 215 275, 215 250" class="outline med"/>
-
-  <!-- Правая нога -->
-  <path d="M225 245 C225 270, 225 300, 225 330 C225 345, 215 355, 200 355 C185 355, 185 340, 190 325 C195 300, 200 275, 210 250" class="outline med"/>
-
-  <!-- ========== ПРАВЫЙ ЧЕЛОВЕЧЕК ========== -->
-  <!-- Голова -->
-  <circle cx="480" cy="110" r="28" class="outline thick"/>
-
-  <!-- Тело -->
-  <path d="M455 138 C450 160, 445 180, 445 210 C445 230, 455 245, 480 245 C505 245, 515 230, 515 210 C515 180, 510 160, 505 138 Z" class="outline thick"/>
-
-  <!-- Правая рука (поднята вверх) -->
-  <path d="M505 145 C525 135, 540 110, 545 85 C550 65, 542 55, 530 58 C520 60, 515 75, 510 95 C505 110, 500 130, 495 145" class="outline med"/>
-
-  <!-- Левая рука (обнимает левого человечка) -->
-  <path d="M455 145 C440 140, 420 130, 390 120 C375 115, 365 125, 370 140 C375 155, 390 155, 405 150 C425 143, 440 150, 450 155" class="outline med"/>
-
-  <!-- Левая нога (объёмная) -->
-  <path d="M460 245 C450 270, 440 300, 435 330 C432 345, 440 355, 455 355 C470 355, 470 340, 470 325 C470 300, 475 275, 475 250" class="outline med"/>
-
-  <!-- Правая нога -->
-  <path d="M485 245 C485 270, 485 300, 485 330 C485 345, 475 355, 460 355 C445 355, 445 340, 450 325 C455 300, 460 275, 470 250" class="outline med"/>
+  <!-- СЕРДЕЧКО (повыше — между головами, чуть ниже уровня глаз, жирное) -->
+  <path d="M250 95 C245 85, 235 85, 235 95 C235 105, 250 115, 250 120 C250 115, 265 105, 265 95 C265 85, 255 85, 250 95 Z" class="heart"/>
 </svg>
