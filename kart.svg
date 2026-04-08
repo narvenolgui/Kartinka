@@ -9,36 +9,24 @@
   </defs>
 
   <!-- === ЛЕВЫЙ ЧЕЛОВЕЧЕК === -->
-  <!-- Голова (центр 200) -->
-  <circle cx="200" cy="100" r="24" class="body-line head"/>
-
-  <!-- Шея и туловище -->
-  <path d="M200 124 C198 145, 197 160, 196 185" class="body-line torso"/>
-
-  <!-- Левая рука (поднята вверх) -->
-  <path d="M198 135 C170 120, 155 90, 160 60" class="body-line limb"/>
-
-  <!-- Правая рука (обнимает правого, доходит до его плеча) -->
-  <path d="M198 138 C210 125, 225 115, 252 110" class="body-line limb"/>
-
+  <circle cx="180" cy="100" r="24" class="body-line head"/>
+  <path d="M180 124 C178 145, 177 160, 176 185" class="body-line torso"/>
+  <!-- Левая рука вверх -->
+  <path d="M178 135 C150 120, 135 90, 140 60" class="body-line limb"/>
   <!-- Ноги -->
-  <path d="M196 185 C185 210, 178 235, 175 260" class="body-line limb"/>
-  <path d="M196 185 C205 210, 210 235, 215 260" class="body-line limb"/>
+  <path d="M176 185 C165 210, 158 235, 155 260" class="body-line limb"/>
+  <path d="M176 185 C185 210, 190 235, 195 260" class="body-line limb"/>
 
   <!-- === ПРАВЫЙ ЧЕЛОВЕЧЕК === -->
-  <!-- Голова (центр 248, расстояние между центрами 48 = касание голов) -->
-  <circle cx="248" cy="100" r="24" class="body-line head"/>
-
-  <!-- Туловище -->
-  <path d="M248 124 C250 145, 251 160, 252 185" class="body-line torso"/>
-
-  <!-- Правая рука (поднята вверх) -->
-  <path d="M250 135 C278 120, 293 90, 288 60" class="body-line limb"/>
-
-  <!-- Левая рука (обнимает левого, доходит до его плеча) -->
-  <path d="M250 138 C238 125, 223 115, 200 110" class="body-line limb"/>
-
+  <circle cx="320" cy="100" r="24" class="body-line head"/>
+  <path d="M320 124 C322 145, 323 160, 324 185" class="body-line torso"/>
+  <!-- Правая рука вверх -->
+  <path d="M322 135 C350 120, 365 90, 360 60" class="body-line limb"/>
   <!-- Ноги -->
-  <path d="M252 185 C263 210, 270 235, 273 260" class="body-line limb"/>
-  <path d="M252 185 C243 210, 238 235, 233 260" class="body-line limb"/>
+  <path d="M324 185 C335 210, 342 235, 345 260" class="body-line limb"/>
+  <path d="M324 185 C315 210, 310 235, 305 260" class="body-line limb"/>
+
+  <!-- === ОБНИМАЮЩИЕ РУКИ — ЕДИНАЯ ЛИНИЯ === -->
+  <!-- От левого плеча до правого плеча одной плавной дугой -->
+  <path d="M178 138 C220 160, 280 160, 322 138" class="body-line limb"/>
 </svg>
