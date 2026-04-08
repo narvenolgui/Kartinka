@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 350" width="700" height="350">
   <defs>
     <style>
       .body-line { fill: none; stroke: #1a2a4a; stroke-linecap: round; stroke-linejoin: round; }
@@ -6,32 +6,48 @@
       .limb { stroke-width: 4.5; }
       .head { stroke-width: 5; fill: none; }
       .rope { stroke-width: 4; stroke: #1a2a4a; fill: none; }
-      .anger { stroke-width: 2.5; stroke: #1a2a4a; }
+      .tension { stroke-width: 2; stroke: #1a2a4a; }
     </style>
   </defs>
 
-  <!-- ЛЕВЫЙ ЧЕЛОВЕЧЕК -->
-  <circle cx="160" cy="100" r="24" class="body-line head"/>
-  <path d="M160 124 C158 145, 157 160, 156 185" class="body-line torso"/>
-  <path d="M158 135 C130 140, 110 145, 95 150" class="body-line limb"/>
-  <path d="M158 135 C175 140, 190 148, 200 152" class="body-line limb"/>
-  <path d="M156 185 C145 210, 138 235, 135 260" class="body-line limb"/>
-  <path d="M156 185 C165 210, 170 235, 175 260" class="body-line limb"/>
-  <path d="M120 70 L110 60 M125 80 L108 75 M118 55 L108 45" class="anger"/>
+  <!-- ЛЕВЫЙ ЧЕЛОВЕЧЕК (тянет влево, корпус наклонён) -->
+  <!-- Голова смещена влево -->
+  <circle cx="140" cy="90" r="24" class="body-line head"/>
+  <!-- Тело с сильным наклоном влево (дуга влево) -->
+  <path d="M140 114 C135 140, 125 160, 115 190" class="body-line torso"/>
+  <!-- Левая рука тянет канат назад и влево -->
+  <path d="M130 145 C100 150, 75 155, 60 160" class="body-line limb"/>
+  <!-- Правая рука тоже тянет -->
+  <path d="M130 145 C145 150, 160 155, 175 160" class="body-line limb"/>
+  <!-- Ноги: левая упирается вперёд, правая назад -->
+  <path d="M115 190 C100 215, 85 240, 75 270" class="body-line limb"/>
+  <path d="M115 190 C125 215, 140 240, 150 270" class="body-line limb"/>
+  <!-- Чёрточки злости и напряжения у головы и ног -->
+  <path d="M100 60 L85 50 M105 70 L88 65 M98 45 L85 35" class="tension"/>
+  <path d="M70 265 L60 260 M80 275 L65 275" class="tension"/>
 
-  <!-- ПРАВЫЙ ЧЕЛОВЕЧЕК -->
-  <circle cx="440" cy="100" r="24" class="body-line head"/>
-  <path d="M440 124 C442 145, 443 160, 444 185" class="body-line torso"/>
-  <path d="M442 135 C470 140, 490 145, 505 150" class="body-line limb"/>
-  <path d="M442 135 C425 140, 410 148, 400 152" class="body-line limb"/>
-  <path d="M444 185 C455 210, 462 235, 465 260" class="body-line limb"/>
-  <path d="M444 185 C435 210, 430 235, 425 260" class="body-line limb"/>
-  <path d="M480 70 L490 60 M475 80 L492 75 M482 55 L492 45" class="anger"/>
+  <!-- ПРАВЫЙ ЧЕЛОВЕЧЕК (тянет вправо, корпус наклонён) -->
+  <circle cx="560" cy="90" r="24" class="body-line head"/>
+  <path d="M560 114 C565 140, 575 160, 585 190" class="body-line torso"/>
+  <!-- Правая рука тянет назад -->
+  <path d="M570 145 C600 150, 625 155, 640 160" class="body-line limb"/>
+  <!-- Левая рука тянет -->
+  <path d="M570 145 C555 150, 540 155, 525 160" class="body-line limb"/>
+  <!-- Ноги -->
+  <path d="M585 190 C600 215, 615 240, 625 270" class="body-line limb"/>
+  <path d="M585 190 C575 215, 560 240, 550 270" class="body-line limb"/>
+  <!-- Чёрточки злости -->
+  <path d="M600 60 L615 50 M595 70 L612 65 M602 45 L615 35" class="tension"/>
+  <path d="M630 265 L640 260 M620 275 L635 275" class="tension"/>
 
-  <!-- КАНАТ СЛИТНЫЙ (одна линия от 95 до 505) с разрывом-зигзагом посередине -->
-  <path d="M95 150 
-           C130 153, 170 156, 210 155 
-           L225 145 L235 158 L245 147 L255 156 
-           L265 148 L275 157 L285 149 L295 155 
-           C330 156, 370 153, 505 150" class="rope"/>
+  <!-- КАНАТ (слитный с разрывом посередине, идёт от рук) -->
+  <!-- Левая часть каната от левой руки (x=60) до разрыва -->
+  <path d="M60 160 C100 163, 150 165, 200 163 L215 150 L225 165 L235 148 L245 162 L255 150 L265 163" class="rope"/>
+  <!-- Правая часть каната от разрыва до правой руки (x=640) -->
+  <path d="M295 163 C330 165, 370 165, 410 163 L425 150 L435 165 L445 148 L455 162 L465 150 L475 163 C510 165, 560 163, 640 160" class="rope"/>
+  
+  <!-- Дополнительные линии разрыва (трещины, искры) -->
+  <line x1="270" y1="155" x2="260" y2="140" class="tension"/>
+  <line x1="280" y1="165" x2="290" y2="180" class="tension"/>
+  <line x1="300" y1="158" x2="315" y2="145" class="tension"/>
 </svg>
