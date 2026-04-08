@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" width="500" height="300">
   <defs>
     <style>
-      .body-line { fill: none; stroke: #1a1a1a; stroke-linecap: round; stroke-linejoin: round; }
+      .body-line { fill: none; stroke: #1a2a4a; stroke-linecap: round; stroke-linejoin: round; }
       .torso { stroke-width: 6; }
       .limb { stroke-width: 4.5; }
       .head { stroke-width: 5; fill: none; }
@@ -12,8 +12,10 @@
   <!-- ЛЕВЫЙ ЧЕЛОВЕЧЕК -->
   <circle cx="180" cy="100" r="24" class="body-line head"/>
   <path d="M180 124 C178 145, 177 160, 176 185" class="body-line torso"/>
-  <!-- Левая рука вверх -->
+  <!-- Левая рука (поднята вверх) -->
   <path d="M178 135 C150 120, 135 90, 140 60" class="body-line limb"/>
+  <!-- Правая рука (обнимает правого человечка) -->
+  <path d="M178 138 C195 130, 210 125, 230 120" class="body-line limb"/>
   <!-- Ноги -->
   <path d="M176 185 C165 210, 158 235, 155 260" class="body-line limb"/>
   <path d="M176 185 C185 210, 190 235, 195 260" class="body-line limb"/>
@@ -21,15 +23,14 @@
   <!-- ПРАВЫЙ ЧЕЛОВЕЧЕК -->
   <circle cx="320" cy="100" r="24" class="body-line head"/>
   <path d="M320 124 C322 145, 323 160, 324 185" class="body-line torso"/>
-  <!-- Правая рука вверх -->
+  <!-- Правая рука (поднята вверх) -->
   <path d="M322 135 C350 120, 365 90, 360 60" class="body-line limb"/>
+  <!-- Левая рука (обнимает левого человечка) -->
+  <path d="M322 138 C305 130, 290 125, 270 120" class="body-line limb"/>
   <!-- Ноги -->
   <path d="M324 185 C335 210, 342 235, 345 260" class="body-line limb"/>
   <path d="M324 185 C315 210, 310 235, 305 260" class="body-line limb"/>
 
-  <!-- ОБНИМАЮЩИЕ РУКИ (единая дуга) -->
-  <path d="M178 138 C220 160, 280 160, 322 138" class="body-line limb"/>
-
-  <!-- СЕРДЕЧКО (повыше — между головами, чуть ниже уровня глаз, жирное) -->
-  <path d="M250 95 C245 85, 235 85, 235 95 C235 105, 250 115, 250 120 C250 115, 265 105, 265 95 C265 85, 255 85, 250 95 Z" class="heart"/>
+  <!-- СЕРДЕЧКО (повыше — между головами, уровень примерно 80) -->
+  <path d="M250 85 C245 75, 235 75, 235 85 C235 95, 250 105, 250 110 C250 105, 265 95, 265 85 C265 75, 255 75, 250 85 Z" class="heart"/>
 </svg>
