@@ -4,56 +4,40 @@
       .body-line { fill: none; stroke: #1a2a4a; stroke-linecap: round; stroke-linejoin: round; }
       .torso { stroke-width: 6; }
       .limb { stroke-width: 4.5; }
-      .head { stroke-width: 5; fill: none; }
-      .rope { stroke-width: 4; stroke: #1a2a4a; fill: none; }
-      .tension { stroke-width: 2; stroke: #1a2a4a; }
+      .head { stroke-width: 5; }
+      .rope { stroke-width: 4; stroke: #1a2a4a; }
+      .tension { stroke-width: 2.5; stroke: #1a2a4a; }
     </style>
   </defs>
 
-  <!-- ЛЕВЫЙ ЧЕЛОВЕЧЕК (плавный наклон влево-назад) -->
-  <circle cx="130" cy="85" r="24" class="body-line head"/>
-  <!-- Корпус плавной дугой влево -->
-  <path d="M130 109 C118 135, 100 160, 92 190" class="body-line torso"/>
-  <!-- Левая рука (тянет назад) плавным изгибом -->
-  <path d="M112 145 C90 150, 68 155, 48 160" class="body-line limb"/>
-  <!-- Правая рука (тоже тянет) -->
-  <path d="M112 145 C125 150, 138 155, 150 160" class="body-line limb"/>
-  <!-- Левая нога (упирается вперёд) -->
-  <path d="M92 190 C80 210, 68 235, 60 265" class="body-line limb"/>
-  <!-- Правая нога (назад) -->
-  <path d="M92 190 C102 212, 115 238, 125 268" class="body-line limb"/>
-  <!-- Чёрточки злости (мягкие линии) -->
-  <path d="M90 55 C80 48, 70 42, 65 38" class="tension"/>
-  <path d="M95 65 C85 60, 75 56, 68 53" class="tension"/>
-  <path d="M88 40 C78 33, 68 27, 62 23" class="tension"/>
+  <!-- ЛЕВЫЙ ЧЕЛОВЕЧЕК (наклон влево) -->
+  <circle cx="130" cy="90" r="24" class="body-line head" />
+  <path d="M130 114 C118 140 102 165 92 195" class="body-line torso" />
+  <path d="M112 145 C88 150 65 155 45 160" class="body-line limb" />
+  <path d="M112 145 C126 150 140 155 152 160" class="body-line limb" />
+  <path d="M92 195 C78 215 64 240 56 270" class="body-line limb" />
+  <path d="M92 195 C104 215 116 240 122 270" class="body-line limb" />
 
-  <!-- ПРАВЫЙ ЧЕЛОВЕЧЕК (плавный наклон вправо-назад) -->
-  <circle cx="570" cy="85" r="24" class="body-line head"/>
-  <path d="M570 109 C582 135, 600 160, 608 190" class="body-line torso"/>
-  <path d="M588 145 C610 150, 632 155, 652 160" class="body-line limb"/>
-  <path d="M588 145 C575 150, 562 155, 550 160" class="body-line limb"/>
-  <path d="M608 190 C620 210, 632 235, 640 265" class="body-line limb"/>
-  <path d="M608 190 C598 212, 585 238, 575 268" class="body-line limb"/>
-  <path d="M610 55 C620 48, 630 42, 635 38" class="tension"/>
-  <path d="M605 65 C615 60, 625 56, 632 53" class="tension"/>
-  <path d="M612 40 C622 33, 632 27, 638 23" class="tension"/>
+  <!-- ПРАВЫЙ ЧЕЛОВЕЧЕК (наклон вправо) -->
+  <circle cx="570" cy="90" r="24" class="body-line head" />
+  <path d="M570 114 C582 140 598 165 608 195" class="body-line torso" />
+  <path d="M588 145 C612 150 635 155 655 160" class="body-line limb" />
+  <path d="M588 145 C574 150 560 155 548 160" class="body-line limb" />
+  <path d="M608 195 C622 215 636 240 644 270" class="body-line limb" />
+  <path d="M608 195 C596 215 584 240 578 270" class="body-line limb" />
 
-  <!-- КАНАТ (слитный, с разрывом посередине, плавные переходы) -->
-  <path d="M48 160 C85 163, 130 165, 175 162 
-           C185 161, 190 155, 195 148 
-           C200 155, 205 162, 210 165 
-           C215 158, 220 150, 225 155 
-           C230 162, 235 165, 245 163 
-           C290 165, 340 163, 380 160 
-           C390 159, 395 155, 400 148 
-           C405 155, 410 162, 415 165 
-           C420 158, 425 150, 430 155 
-           C435 162, 440 165, 450 163 
-           C495 165, 540 163, 652 160" class="rope"/>
+  <!-- КАНАТ (слитный с разрывом посередине) -->
+  <path d="M45 160 C100 165 150 162 200 160 
+           L210 148 L220 162 L230 148 L240 162 L250 148 
+           L260 162 L270 148 L280 162 
+           C330 165 380 162 450 160 
+           L460 148 L470 162 L480 148 L490 162 L500 148 
+           L510 162 L520 148 L530 162 
+           C570 165 620 162 655 160" class="rope" />
 
-  <!-- ТРЕЩИНЫ РАЗРЫВА (лёгкие, плавные) -->
-  <path d="M235 158 C230 150, 225 140, 228 135" class="tension"/>
-  <path d="M245 162 C250 155, 258 148, 265 145" class="tension"/>
-  <path d="M400 148 C395 140, 390 132, 393 127" class="tension"/>
-  <path d="M410 165 C415 158, 420 150, 428 147" class="tension"/>
+  <!-- ЛИНИИ НАПРЯЖЕНИЯ / ЗЛОСТИ -->
+  <path d="M88 58 C78 48 68 40 62 35" class="tension" />
+  <path d="M94 68 C84 60 74 54 68 50" class="tension" />
+  <path d="M612 58 C622 48 632 40 638 35" class="tension" />
+  <path d="M606 68 C616 60 626 54 632 50" class="tension" />
 </svg>
