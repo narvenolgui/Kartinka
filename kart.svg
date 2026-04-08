@@ -1,24 +1,47 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">
-  <!-- Левый человечек -->
-  <circle cx="140" cy="80" r="20" fill="none" stroke="black" stroke-width="3"/>
-  <line x1="140" y1="100" x2="140" y2="160" stroke="black" stroke-width="3"/>
-  <!-- Левая рука (вытянута в сторону) -->
-  <line x1="140" y1="120" x2="80" y2="130" stroke="black" stroke-width="3"/>
-  <!-- Правая рука (обнимает) - будет нарисована позже, за правым человечком -->
-  <line x1="140" y1="120" x2="170" y2="110" stroke="black" stroke-width="3"/>
-  <line x1="140" y1="160" x2="120" y2="190" stroke="black" stroke-width="3"/>
-  <line x1="140" y1="160" x2="160" y2="190" stroke="black" stroke-width="3"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" width="500" height="300">
+  <defs>
+    <style>
+      .body-line { fill: none; stroke: #1a1a1a; stroke-linecap: round; stroke-linejoin: round; }
+      .torso { stroke-width: 6; }
+      .limb { stroke-width: 4.5; }
+      .head { stroke-width: 5; fill: none; }
+    </style>
+  </defs>
 
-  <!-- Правый человечек -->
-  <circle cx="260" cy="80" r="20" fill="none" stroke="black" stroke-width="3"/>
-  <line x1="260" y1="100" x2="260" y2="160" stroke="black" stroke-width="3"/>
-  <!-- Правая рука (вытянута в сторону) -->
-  <line x1="260" y1="120" x2="320" y2="130" stroke="black" stroke-width="3"/>
-  <!-- Левая рука (обнимает) -->
-  <line x1="260" y1="120" x2="230" y2="110" stroke="black" stroke-width="3"/>
-  <line x1="260" y1="160" x2="240" y2="190" stroke="black" stroke-width="3"/>
-  <line x1="260" y1="160" x2="280" y2="190" stroke="black" stroke-width="3"/>
+  <!-- === ЛЕВЫЙ ЧЕЛОВЕЧЕК === -->
+  <!-- Голова -->
+  <circle cx="170" cy="100" r="24" class="body-line head"/>
 
-  <!-- Дополнительная линия, чтобы показать, что руки лежат на плечах (опционально) -->
-  <line x1="170" y1="110" x2="240" y2="70" stroke="black" stroke-width="2" stroke-dasharray="4,2"/>
+  <!-- Шея и туловище (плавный изгиб) -->
+  <path d="M170 124 C168 145, 165 160, 163 185" class="body-line torso"/>
+
+  <!-- Левая рука (поднята вверх, плавный изгиб) -->
+  <path d="M168 135 C140 120, 125 90, 130 60" class="body-line limb"/>
+
+  <!-- Правая рука (обнимает правого человечка, идёт вверх и на плечо) -->
+  <path d="M168 138 C190 125, 210 115, 230 105" class="body-line limb"/>
+
+  <!-- Ноги (лёгкий изгиб) -->
+  <path d="M163 185 C150 210, 140 235, 135 260" class="body-line limb"/>
+  <path d="M163 185 C175 210, 180 235, 185 260" class="body-line limb"/>
+
+  <!-- === ПРАВЫЙ ЧЕЛОВЕЧЕК === -->
+  <!-- Голова -->
+  <circle cx="330" cy="100" r="24" class="body-line head"/>
+
+  <!-- Туловище -->
+  <path d="M330 124 C332 145, 335 160, 337 185" class="body-line torso"/>
+
+  <!-- Правая рука (поднята вверх) -->
+  <path d="M332 135 C360 120, 375 90, 370 60" class="body-line limb"/>
+
+  <!-- Левая рука (обнимает левого человечка) -->
+  <path d="M332 138 C310 125, 290 115, 270 105" class="body-line limb"/>
+
+  <!-- Ноги -->
+  <path d="M337 185 C350 210, 360 235, 365 260" class="body-line limb"/>
+  <path d="M337 185 C325 210, 320 235, 315 260" class="body-line limb"/>
+
+  <!-- === ДОПОЛНИТЕЛЬНАЯ ДЕТАЛЬ: сердечко между ними (лёгкое, едва заметное) === -->
+  <path d="M250 130 C245 120, 235 120, 235 130 C235 140, 250 150, 250 155 C250 150, 265 140, 265 130 C265 120, 255 120, 250 130 Z" fill="none" stroke="#d44" stroke-width="2" opacity="0.6"/>
 </svg>
